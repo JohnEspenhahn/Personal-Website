@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="hahnApp">
+<head>
+  <!-- load bootstrap and fontawesome via CDN -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+  <!-- load angular and angular route via CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.1.1/ui-bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.1.1/ui-bootstrap-tpls.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <title>John Espenhahn</title>
+</head>
+<body ng-controller="mainController">
+
+  <!-- HEADER AND NAVBAR -->
+  <header>
+    <nav class="navbar navbar-default navbar-tall">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <img id="profile" src="img/me.png" class="img-responsive img-circle pull-left" alt="Me" />
+
+            <button type="button" class="btn navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="/">John Espenhahn</a>
+          </div>
+
+          <div class="collapse navbar-collapse" uib-collapse="isCollapsed">
+            <ul class="nav navbar-nav navbar-right">
+              <li ng-class="{active: $route.current.activetab === 'home'}"><a href="#home"> Home</a></li>
+              <li ng-class="{active: $route.current.activetab === 'portfolio'}"><a href="#portfolio"> Portfolio</a></li>
+            </ul>
+            <span>&nbsp;</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div id="main" class="row">
+      <div class="primary col-lg-8 col-md-8 col-sm-12">
+        <div ng-view></div>
+      </div>
+      <div class="secondary col-lg-4 col-md-4 col-sm-12">
+        <aside class="jumbotron">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <i class="fa fa-fw fa-map-marker"></i>
+                  Chapel Hill, NC
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa fa-fw fa-envelope-o"></i>
+                  <a href="mailto:john@espenhahn.org">John@espenhahn.org</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa fa-fw fa-github"></i>
+                  <a href="http://github.com/JohnEspenhahn">Github.com/JohnEspenhahn</a>
+              </tr>
+            </tbody>
+          </table>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
