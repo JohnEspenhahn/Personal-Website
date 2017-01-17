@@ -1,0 +1,25 @@
+{
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "https://espenhahn.org/john/",
+  "main": "server.js",
+  "dependencies": {
+    "lite-server": "^2.2.2",
+    "sqlite3": "^3.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnEspenhahn/Personal-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnEspenhahn/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/JohnEspenhahn/Personal-Website#readme"
+}
